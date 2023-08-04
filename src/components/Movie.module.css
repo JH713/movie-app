@@ -7,13 +7,33 @@
 	border-radius: 3%;
 	background-color: white;
 	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+}
+.summary {
+	padding-bottom: 15px;
 }
 
 img {
 	border-radius: 3%;
 }
 
-.no_dot {
+.genres {
 	list-style-type: none;
 	padding: 0;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin-top: auto;
+}
+
+.no_underline {
+	text-decoration-line: none;
+	color:black;
+}
+
+.genre {
+	margin: 5px 10px; 
+	color: rgb(108, 107, 107);
 }

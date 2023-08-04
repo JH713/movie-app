@@ -1,17 +1,23 @@
  import PropTypes from "prop-types";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import styles from "./Movie.module.css"
 
-function Movie({id, coverImg, title, summary, genres}) {
-	return <div className={styles.movie}>
+
+function Movie({id, coverImg, title, summary, genres, year}) {
+	const navigate = useNavigate();
+	const onClick = () => {
+		navigate(`/movie/${id}`);
+	};
+	return <div className={styles.movie} onClick={onClick}>
 	<img src={coverImg} alt={title} />
-  <ul className={styles.no_dot}>
-	{genres.map(g => <li key={g}>{g}</li>)}
-  </ul>
   <h2>
-	<Link to={`/movie/${id}`}>{title}</Link>
+	<Link to={`/movie/${id}`} className={styles.no_underline}>{title}</Link>
 	</h2>
-  <p>{summary.length > 245 ? `${summary.slice(0, 245)}...` : summary}</p>
+	<div>{year}</div>
+  <p className={styles.summary}>{summary.length > 245 ? `${summary.slice(0, 245)}...` : summary}</p>
+  <ul className={styles.genres}>
+	{genres.map(g => <li className={styles.genre} key={g}>{g}</li>)}
+  </ul>
 </div>;
 }
 
