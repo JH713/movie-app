@@ -1,0 +1,19 @@
+.movie {
+	width: 300px;
+	text-align: center;
+	margin: 20px;
+	border: 1px;
+	border-style: solid;
+	border-radius: 3%;
+	background-color: white;
+	padding: 20px;
+}
+
+img {
+	border-radius: 3%;
+}
+
+.no_dot {
+	list-style-type: none;
+	padding: 0;
+}
