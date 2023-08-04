@@ -28,12 +28,17 @@ img {
 	margin-top: auto;
 }
 
-.no_underline {
+.title {
 	text-decoration-line: none;
 	color:black;
+	transition: all 0.4s;
 }
 
 .genre {
 	margin: 5px 10px; 
 	color: rgb(108, 107, 107);
+}
+
+.movie:hover > h2 > .title {
+	background-color: rgba(255, 212, 155, 0.837);
 }

@@ -11,7 +11,7 @@ function Movie({id, coverImg, title, summary, genres, year}) {
 	return <div className={styles.movie} onClick={onClick}>
 	<img src={coverImg} alt={title} />
   <h2>
-	<Link to={`/movie/${id}`} className={styles.no_underline}>{title}</Link>
+	<Link to={`/movie/${id}`} className={styles.title}>{title}</Link>
 	</h2>
 	<div>{year}</div>
   <p className={styles.summary}>{summary.length > 245 ? `${summary.slice(0, 245)}...` : summary}</p>
